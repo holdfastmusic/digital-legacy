@@ -1,0 +1,53 @@
+{
+  "name": "Digital Legacy",
+  "short_name": "DL Legacy",
+  "description": "Gestisci la tua eredità digitale in modo sicuro",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "lang": "it",
+  "categories": ["finance", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Apri il dashboard principale",
+      "url": "/"
+    },
+    {
+      "name": "I miei Asset",
+      "short_name": "Asset",
+      "description": "Gestisci i tuoi asset digitali",
+      "url": "/assets"
+    },
+    {
+      "name": "Beneficiari",
+      "short_name": "Beneficiari",
+      "description": "Gestisci i tuoi beneficiari",
+      "url": "/beneficiaries"
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

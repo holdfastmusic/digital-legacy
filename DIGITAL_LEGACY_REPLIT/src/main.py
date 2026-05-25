@@ -12,6 +12,7 @@ from src.routes.digital_assets import digital_assets_bp
 from src.routes.beneficiaries import beneficiaries_bp
 from src.routes.assignments import assignments_bp
 from src.routes.succession_plans import succession_plans_bp
+from src.routes.mobile import mobile_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static'))
 app.config['SECRET_KEY'] = 'digital_legacy_secret_key_2024_secure'
@@ -26,6 +27,7 @@ app.register_blueprint(digital_assets_bp, url_prefix='/api')
 app.register_blueprint(beneficiaries_bp, url_prefix='/api')
 app.register_blueprint(assignments_bp, url_prefix='/api')
 app.register_blueprint(succession_plans_bp, url_prefix='/api')
+app.register_blueprint(mobile_bp, url_prefix='/api')
 
 # Database configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(os.path.dirname(__file__), 'database', 'app.db')}"
@@ -38,6 +40,7 @@ from src.models.digital_asset import DigitalAsset
 from src.models.beneficiary import Beneficiary
 from src.models.asset_assignment import AssetAssignment
 from src.models.succession_plan import SuccessionPlan
+from src.models.push_subscription import PushSubscription
 
 with app.app_context():
     db.create_all()
