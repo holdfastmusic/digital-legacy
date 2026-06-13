@@ -16,7 +16,11 @@ App Flask per la gestione del patrimonio digitale (lascito): asset digitali, ben
 
 ---
 
-## Ecosistema holdfastmusic.it (server Dell self-hosted)
+## Ecosistema holdfastmusic.it (VPS Hetzner)
+
+**VPS**: Hetzner CPX22 — 178.105.178.10 — Ubuntu 22.04 — Nuremberg
+**SSH**: `ssh holdfast-vps` (alias in ~/.ssh/config, user root, chiave ~/.ssh/id_ed25519_reelforge)
+**Nota**: il Dell di casa (192.168.1.46) è DISMESSO come server principale (RAM difettosa) — usato solo come backup LAN. Lo script `deploy.sh` di CFO-AI punta ancora al vecchio IP — da aggiornare.
 
 | Servizio | URL | Porta |
 |---|---|---|
@@ -29,7 +33,7 @@ App Flask per la gestione del patrimonio digitale (lascito): asset digitali, ben
 | n8n | n8n.holdfastmusic.it | 5678 |
 | Postiz | postiz.holdfastmusic.it | 5000 |
 | Paperclip | paperclip.holdfastmusic.it | 3100 |
-| Drone | drone.holdfastmusic.it | 8501 |
+| Drone (DroneOps) | drone.holdfastmusic.it | 8501 |
 | Media | media.holdfastmusic.it | 8088 |
 
 Tunnel: Cloudflare (`d2c659ec-5a66-44e3-8071-fe2a8d02bef7`)
