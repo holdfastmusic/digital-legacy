@@ -77,6 +77,8 @@ Poi personalizzalo con missione corrente e ultima release Kujan.
 ---
 
 ## Note operative
-- Il server Dell è sempre acceso; le sessioni CCR su Claude.ai/code accedono a questo repo via GitHub
-- Per sessioni sempre-on anche a Mac spento → usare Claude Code su VPS (vedere `scripts/vps-setup.md`)
+- **CCR (claude.ai/code)** non può fare SSH in uscita per policy di rete — non può connettersi al VPS direttamente
+- Per sessioni sempre-on anche a Mac spento → installare Claude Code CLI sul VPS + tmux (vedere `scripts/vps-setup.md`)
+- Il Dell di casa (192.168.1.46) è DISMESSO — solo backup LAN
+- **TODO**: `deploy.sh` di CFO-AI punta ancora a 192.168.1.46 — fixare aprendo sessione su repo `holdfastmusic/cfo-ai`
 - Utente: Francesco Fabbri / francesco.fabbri@gmail.com / Nevaproject
