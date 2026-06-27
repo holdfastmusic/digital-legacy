@@ -1,12 +1,13 @@
 from flask import Blueprint, jsonify, request
 from datetime import datetime, timedelta
+from functools import wraps
+import os
 import jwt
 from src.models.user import User, db
 
 auth_bp = Blueprint('auth', __name__)
 
-# Secret key for JWT (in production, use environment variable)
-JWT_SECRET = 'digital_legacy_secret_key_2024'
+JWT_SECRET = os.environ.get('JWT_SECRET', 'digital_legacy_secret_key_2024')
 
 @auth_bp.route('/register', methods=['POST'])
 def register():
@@ -113,7 +114,7 @@ def verify_token():
         return jsonify({'error': str(e)}), 500
 
 def require_auth(f):
-    """Decorator to require authentication for routes"""
+    @wraps(f)
     def decorated_function(*args, **kwargs):
         try:
             token = request.headers.get('Authorization')
@@ -140,6 +141,5 @@ def require_auth(f):
         except Exception as e:
             return jsonify({'error': str(e)}), 500
     
-    decorated_function.__name__ = f.__name__
     return decorated_function
 

@@ -2,13 +2,16 @@ from flask import Blueprint, jsonify, request
 from src.models.digital_asset import DigitalAsset, db
 from src.routes.auth import require_auth
 from cryptography.fernet import Fernet
-import base64
+import os
 
 digital_assets_bp = Blueprint('digital_assets', __name__)
 
-# Encryption key for credentials (in production, use environment variable)
-ENCRYPTION_KEY = Fernet.generate_key()
-cipher_suite = Fernet(ENCRYPTION_KEY)
+ENCRYPTION_KEY = os.environ.get('ENCRYPTION_KEY')
+if not ENCRYPTION_KEY:
+    ENCRYPTION_KEY = Fernet.generate_key().decode()
+    print(f"WARNING: No ENCRYPTION_KEY set. Generated ephemeral key. "
+          f"Set ENCRYPTION_KEY={ENCRYPTION_KEY} in environment to persist.")
+cipher_suite = Fernet(ENCRYPTION_KEY.encode() if isinstance(ENCRYPTION_KEY, str) else ENCRYPTION_KEY)
 
 def encrypt_credentials(credentials):
     """Encrypt sensitive credentials"""
