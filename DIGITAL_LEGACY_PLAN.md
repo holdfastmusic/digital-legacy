@@ -311,6 +311,11 @@ consulenti patrimoniali, non solo per notai.
 8. **Nuovo (12.4)**: un "inventario patrimoniale + accessi" più ampio (conti, polizze, app) compete
    con strumenti già usati da notai/commercialisti (es. software di gestione successioni), o li
    completa?
+9. **Nuovo (12.5)**: un posizionamento "mappa di famiglia utile anche in vita" richiede un modello
+   di condivisione/co-visibilità con i familiari prima del decesso — un cambio di prodotto non
+   banale rispetto al solo trigger post-mortem. Va validato con utenti reali nella fascia 50-60
+   prima di investirci: preferiscono uno strumento condiviso da subito, o mantengono la logica
+   "segreto fino alla morte" del modello attuale?
 
 ---
 
@@ -470,6 +475,59 @@ notarile). Il valore aggiunto reale di Digital Legacy qui non è sostituire la s
 ma **essere l'indice che dice ai familiari dove guardare** — un "cosa esiste e chi contattare",
 non un sostituto della dichiarazione di successione. Va comunicato chiaramente per evitare che il
 prodotto sembri promettere una funzione legale che non ha.
+
+### 12.5 — Posizionamento per il target 50-60enne: "mappa di famiglia", non "vault di sicurezza"
+
+Il modulo core disegnato in 12.1-12.4 risolve un problema tecnico/legale (niente credenziali in
+giro). Ma c'è anche un problema di posizionamento che vale la pena affrontare esplicitamente,
+perché cambia sia il messaggio sia — in parte — il prodotto: **il 50-60enne di oggi non è
+digital native**. Ha 20-30 anni di sedimentazione digitale (email, home banking, social,
+abbonamenti) accumulata senza un criterio, ma il suo problema reale non è la sicurezza
+informatica — è la stessa ansia che ha per il cassetto dei documenti cartacei: *"se mi succede
+qualcosa, i miei figli sapranno dove guardare?"*
+
+**Perché il framing "indice", non "vault", è quello giusto per questo target**
+Un vault di credenziali risponde a un'ansia di sicurezza (furto, breach) più sentita da un target
+giovane/crypto-native. Per il target 50-60 l'ansia è organizzativa, non di sicurezza. "L'indice
+che dice dove guardare" ricalca un modello mentale che questa generazione già possiede — il
+notaio, il faldone, "chiedi a tuo zio dov'è il testamento" — invece di chiederle di fidarsi di un
+concetto (vault cifrato zero-knowledge) che non ha gli strumenti per valutare, e che
+intuitivamente non applica nemmeno alle proprie password quotidiane (la maggioranza le scrive su
+un foglio, non usa un password manager). Questo abbassa in modo diretto la barriera di fiducia
+individuata come rischio più grande dell'intero piano (Sezione 6, Rischio 1): è molto più facile
+scrivere "ho una polizza vita con Generali, referente il mio commercialista" che scrivere la
+password vera.
+
+**L'estensione di prodotto che ne consegue: utile anche in vita, non solo post-mortem**
+Se il messaggio diventa "aiuto chi resta a trovare tutto" invece di "gestione patrimonio
+digitale", si apre un caso d'uso più grande e più urgente di quello attuale: la cura dei genitori
+anziani mentre sono ancora vivi. Il 50-60enne di oggi è spesso generazione sandwich — gestisce già
+oggi le pratiche dei genitori 80-90enni, non solo la propria eventuale successione. "Mamma è
+appena stata ricoverata e non troviamo il numero della sua assicurazione" è uno scenario che
+capita molto più spesso della morte, e non richiede alcun trigger di inattività per generare
+valore: la mappa serve da subito, condivisa e aggiornata in famiglia, non sbloccata solo al
+decesso. Questo riduce anche, come effetto collaterale, il problema dei falsi positivi del dead
+man's switch (11.4): il prodotto non dipende più esclusivamente dall'inferire correttamente la
+morte per essere utile.
+
+**Implicazione per il canale B2B notai**
+Un "vault di credenziali" è un prodotto con responsabilità e rischio percepito alto da consigliare
+a un cliente. Un "indice/checklist da compilare insieme al cliente" è invece uno strumento che
+notaio o commercialista possono proporre senza esporsi — complemento al testamento, non sistema
+che maneggia segreti. Più facile da vendere, più coerente con 12.4.
+
+**Due tensioni da tenere sotto controllo**
+1. *Verticale crypto (Modello C)*: per una chiave privata/seed phrase persa non esiste "chi
+   contattare" — non c'è un servizio clienti da chiamare. Il framing "indice, non vault" non copre
+   questo caso: va comunicato come eccezione esplicita, non come estensione naturale del core.
+2. *Rischio di sovra-promettere*: "indice che dice dove guardare" deve restare esplicitamente
+   *non* un sostituto della dichiarazione di successione (coerente con l'avvertenza già in 12.4) —
+   il claim corretto è "riduce il tempo e l'ansia di cercare", non "risolve la successione".
+
+**Raccomandazione**: orientare comunicazione e onboarding su "mappa di famiglia, utile da subito,
+non solo dopo" come messaggio principale — non "gestione sicura del patrimonio digitale" — con il
+disclaimer legale come nota secondaria, non come titolo. In pratica: il tono del prodotto si
+avvicina più a "organizzazione familiare" che a "sicurezza informatica".
 
 ### Perché questa non è (solo) una scelta tecnica, ma la risposta giusta alla critica di mercato
 Uno dei punti più duri della critica esterna era: "il prodotto non aggiunge valore rispetto ad
