@@ -548,3 +548,94 @@ non è mai stata essenziale al flusso reale del prodotto — a un modulo opziona
 MVP la versione più semplice e legalmente più difendibile, e la si allarga da "asset digitali" a
 "indice generale del patrimonio e degli accessi", che è più vicino a ciò che un notaio o un
 familiare cerca davvero in un momento di successione.
+
+### 12.6 — Permessi granulari per contatto e distinzione contatto/erede legale
+
+Il modello binario "condiviso da subito" vs "segreto fino alla morte" (12.5) va raffinato: per
+ogni contatto designato, il titolare deve poter scegliere **cosa** condividere e **quando**, non
+solo se condividere.
+
+**Matrice permessi (chi, cosa, quando)**
+- *Chi*: quale contatto (già modellato in `Beneficiary`)
+- *Cosa*: istruzioni, riferimenti pubblici, eventuali contenuti propri del titolare (foto, mail —
+  fuori scope MVP, solo se il prodotto evolve in quella direzione), vault avanzato (password)
+- *Quando*: accesso live (da subito) oppure solo al trigger post-mortem
+
+Estensione naturale del modello dati esistente: `AssetAssignment` è già la relazione N:N
+asset↔beneficiario con istruzioni per-coppia. Basta aggiungere un campo `access_timing` (live /
+solo-trigger) e uno scope di contenuto, senza introdurre un nuovo schema.
+
+**Distinzione critica: "contatto con accesso" ≠ "erede legale"**
+In Italia chi eredita è determinato dal testamento o dalla successione legittima (artt. 565 e ss.
+c.c.), mai da una designazione fatta su un'app terza. Questo va reso esplicito, per due motivi:
+1. **Evitare aspettative false**: se l'utente crede di poter "distribuire l'eredità" tramite
+   l'app, e il contatto designato non coincide con l'erede legale reale, il prodotto ha
+   contribuito a generare un conflitto familiare.
+2. **Protezione del prodotto**: se un erede legale escluso contestasse l'accesso dato a un
+   non-erede, l'app deve poter dimostrare di aver sempre trattato "contatto designato" come ruolo
+   puramente operativo (chi riceve informazioni), mai come attribuzione di diritti.
+
+Implicazione tecnica: il campo `relationship` già esistente (spouse, child, ecc.) resta
+informativo, non va mai trasformato in un campo tipo "erede legale" — l'app non deve arrogarsi una
+determinazione che non le compete. Serve invece un disclaimer esplicito in UI e T&C.
+
+**Correzione alla matrice di rischio (11.3 / 12)**
+Il rischio penale (Art. 615-ter) non dipende dal *quando* (vivo vs morto) ma dal *cosa*: contenuti
+propri del titolare condivisi in vita con consenso esplicito (foto, mail, istruzioni) non
+comportano alcun rischio — è condivisione autorizzata, come un album condiviso. Il rischio resta
+concentrato solo sulle credenziali che permettono di accedere a sistemi di terzi, in vita o
+post-mortem, perché quell'account non è "proprietà" del titolare da poter condividere liberamente.
+Questo isola ulteriormente il vault di credenziali come unica area che giustifica l'architettura
+zero-knowledge separata (Fase 3), indipendentemente dalla granularità dei permessi.
+
+**Nota architetturale**: l'accesso "live" richiede che il beneficiario diventi un utente
+autenticato (oggi `Beneficiary` è solo un destinatario passivo di email, senza login). È un
+cambiamento reale, non enorme ma non banale: un secondo tipo di account con permessi scoped per
+asset/categoria, non solo un indirizzo email di destinazione. Va preventivato nella Fase 1/2 della
+roadmap se si vuole realizzare l'accesso live descritto in 12.5.
+
+### 12.7 — Può funzionare come business? Analisi critica e realistica
+
+**Verdetto diretto**: come business a scala, probabilmente no. Come piccola attività B2B
+redditizia gestita con pazienza, è plausibile — ma il rischio di esecuzione si concentra quasi
+interamente in un solo punto: la vendita a un canale (notai) strutturalmente lento e diffidente
+verso il software esterno.
+
+**Non è un business scalabile.** Il TAM corretto (~5.000 notai) pone un tetto strutturale: anche
+il 10% di penetrazione all'anno 3 vale ~€500K ARR (Sezione 8) — un buon risultato per un'attività
+solista o a due persone, non per una startup che giustifichi investimento o crescita di team.
+Allargare a commercialisti/consulenti patrimoniali aiuta ma non cambia l'ordine di grandezza:
+resta un mercato di nicchia professionale italiana, non un mercato scalabile globalmente.
+
+**Il canale B2B notai costa più di quanto l'unit economics attuale assuma.** Il piano stima
+margine >90% e costi infra ~€100/mese (Sezione 8), coerente con un motore self-serve/PLG a basso
+CAC. Ma vendere a notai — categoria lenta nell'adozione tecnologica, relazionale, sensibile alla
+responsabilità professionale — richiede quasi certamente vendita diretta e relazionale (fiere di
+settore, contatti personali, referral tra studi), non acquisizione via web. Questo implica costi
+di go-to-market più alti di quelli previsti e cicli di vendita lunghi (mesi, non settimane) prima
+di vedere ricavi — un fattore che l'unit economics in Sezione 8 non riflette.
+
+**Il rischio esistenziale già segnalato in 11.6 è concreto, non teorico.** Se il Notariato
+standardizza il protocollo con Microsoft e Google, un prodotto terzo rischia di essere bypassato
+proprio nel canale su cui il piano punta tutto — un ente che lavora già in quella direzione con
+partner dalle risorse enormemente superiori.
+
+**Il posizionamento "mappa di famiglia, utile in vita" (12.5) migliora l'engagement ma non è
+privo di precedenti fallimentari.** Gli strumenti di organizzazione della vita/famiglia
+(raccoglitori documenti, planner condivisi) hanno storicamente ritenzione ed engagement bassi: le
+persone intendono organizzarsi ma procrastinano — lo stesso problema del 13% di tasso testamentario
+già citato in 4.3. Rendere il prodotto utile "anche in vita" riduce il rischio di app-zombie
+(installata e mai più aperta), ma introduce più superficie da costruire (autenticazione
+beneficiario, permessi granulari, notifiche — vedi 12.6) per un team presumibilmente piccolo.
+
+**Il prodotto ha un problema strutturale da "polizza assicurativa".** Il suo valore si manifesta
+una sola volta, in un momento imprevedibile, dopo mesi o anni di uso quasi nullo. Se in quel
+momento fallisce — trigger che non scatta, email non recapitata, beneficiario che non riceve
+nulla — il danno reputazionale per un brand piccolo e senza sponsor istituzionale è potenzialmente
+fatale, mentre Apple e Google hanno riserve di fiducia che assorbono singoli fallimenti.
+
+**Conclusione onesta**: la strada più realistica non è "startup scalabile" ma "piccola attività di
+nicchia B2B, sostenibile se il fondatore ha accesso diretto e pazienza per il canale
+notarile/commercialisti" — oppure, più concretamente, un prodotto costruito come leva per una
+partnership o acquisizione da parte di un attore più grande (assicurazione, banca, o lo stesso
+Notariato — Modello D) piuttosto che come azienda indipendente a lungo termine.
