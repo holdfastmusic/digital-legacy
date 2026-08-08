@@ -111,15 +111,32 @@ istruzioni mentre l'utente è vivo — rischio di prodotto serio, non solo tecni
 
 ### 4.1 Mercato globale — $12-23 miliardi, 15-17% CAGR (stime variabili, mercato frammentato)
 
-| Player | Prezzo | Status |
+| Player | Prezzo | Status aggiornato (ricerca agosto 2026) |
 |---|---|---|
-| Google Inactive Account Manager | Gratis | Trigger 3-18 mesi, 10 contatti, solo dati Google |
-| Apple Digital Legacy | Gratis | 5 Legacy Contact, richiede certificato di morte, solo iCloud |
-| Everplans | $27-100/anno | Acquisito da Precoa (ott 2024) |
-| Clocr | $60/anno | Crypto/NFT, AI messaging |
-| Empathy | B2B assicurazioni | $72M Series C (2024) |
-| Inheriti 2.0 | N/D | Belgio, EU-first |
-| 1Password/Proton Pass | In-app | Emergency access integrato |
+| Google Inactive Account Manager | Gratis | Nessuna espansione a servizi terzi; inasprita la cancellazione automatica account inattivi (rollout fino ad aprile 2025) |
+| Apple Digital Legacy | Gratis | Invariato, solo iCloud, esclude password |
+| Everplans | $75/anno diretto, $196-292/mese per advisor (B2B2C) | Sotto Precoa dal 2024, ancora operativo — vedi 12.10 |
+| Clocr | $59.99/anno | Operativo (~32 dipendenti), nessun funding dal 2021 |
+| Empathy | Gratis per il beneficiario, pagato dagli assicuratori | $72M Series C (mag 2025), 8 delle top 10 compagnie vita USA, 45M+ polizze coperte, +300% ricavi 2024 |
+| GoodTrust | $149 primo anno poi $39/anno | Nessun funding dal 2022 |
+| Cake | — | **Acquisita e assorbita (2024), account ritirati giugno 2025 — il prodotto non esiste più** |
+| Farewill | Gratis (finanziato da charity/assicuratori) | Acquisita da Dignity (2025) — **ha abbandonato i testamenti fai-da-te nel 2026**, pivot su cremazione |
+| Trust & Will | $19-599 diretto + licenza enterprise | $25M+ Series C (mar 2025) con Northwestern Mutual e UBS come investitori strategici; 1M+ utenti |
+| Inheriti 2.0 | N/D | Belgio, operativo, protocollo blockchain proprietario |
+| 1Password/Bitwarden/Dashlane/NordPass | Feature a pagamento | Emergency access invariato |
+| **Proton Pass** | Feature a pagamento | **Nuovo (2025): "Emergency Access" esplicitamente posizionato come eredità digitale** — email, storage, crypto wallet, fino a 5 contatti |
+
+**Nuova minaccia da segnalare**: nel 2025 l'intero settore dei password manager si è riposizionato
+su questo terreno (Proton Pass in testa), non solo Big Tech gratuito. È un competitor adiacente con
+utenti e funding già acquisiti, non un ipotetico futuro.
+
+**Il pattern più rilevante trovato nella ricerca**: **nessuno dei player dedicati al digital legacy
+è cresciuto fino alla scala in modo indipendente.** Everplans, Cake e Farewill sono stati tutti
+acquisiti da assicurazioni o gruppi funerari; Cake è stata smantellata dopo l'acquisizione, Farewill
+ha abbandonato la categoria "testamenti" dopo l'acquisizione. GoodTrust è ferma dal 2022. Solo
+Empathy (B2B puro verso assicuratori, mai stata consumer-first) e Trust & Will (B2B2C fin dal primo
+giorno, mai passata da un modello consumer) mostrano crescita reale — entrambe hanno sempre avuto
+il professionista/l'istituzione come cliente pagante, non il consumatore. Approfondito in 12.10.
 
 **Differenza strutturale importante**: Apple e Google possono "rilasciare l'accesso" al legacy
 contact perché **sono loro stessi il fornitore del servizio** — mediano l'accesso internamente
@@ -130,7 +147,9 @@ istruzioni su come procedere per vie legittime. Questo vincolo strutturale rende
 credenziali intrinsecamente più pericoloso — e meno indispensabile al prodotto — di quanto
 sembrasse nella v1 del piano. **Everplans**, in particolare, è il precedente più vicino alla
 Sezione 12: copre non solo account digitali ma l'intero "patrimonio delle informazioni" (conti,
-assicurazioni, documenti legali) senza necessariamente conservare password.
+assicurazioni, documenti legali) senza necessariamente conservare password, ed è il modello da
+studiare più da vicino (12.10) perché il suo B2B2C via advisor finanziari è quasi identico a quello
+proposto per notai/commercialisti.
 
 ### 4.2 Mercato italiano — quasi vuoto lato prodotto
 
@@ -139,14 +158,17 @@ assicurazioni, documenti legali) senza necessariamente conservare password.
 | Attore italiano | Offerta | Prodotto digitale |
 |---|---|---|
 | Studi legali | Consulenza successione digitale | No |
-| Consiglio Nazionale del Notariato | Guida + protocollo con Microsoft/Google (in sviluppo) | No |
+| Consiglio Nazionale del Notariato | Guida + "Decalogo" (agg. mar 2025) | No |
 | Banche (Widiba, Hype, Flowe) | Nessuna | No |
 | Assicurazioni italiane | Nessuna | No |
+| LexDo.it | Piattaforma legale consumer, instrada verso notai/avvocati come partner | Sì — ma non vende ai professionisti, vedi 12.9 |
+| La Cassaforte Digitale, Lastello | Eredità digitale/blockchain, target consumer diretto | Sì, early-stage, nessun dato di trazione verificabile |
 
-**Attenzione (vedi 11.6)**: il protocollo Notariato–Microsoft–Google in sviluppo non è solo
-un'opportunità di partnership — è anche una minaccia diretta. Se diventa uno standard nazionale
-gestito dagli stessi big tech, un prodotto terzo come Digital Legacy rischia di essere bypassato
-completamente su quel canale.
+**Aggiornamento (vedi 11.6, ricerca agosto 2026)**: il protocollo Notariato–Microsoft–Google risale
+al **2014-2015** (tavolo con Bocconi, Facebook, studio legale Portolano Cavallo) e non risulta
+alcuno sviluppo tecnico attivo dal 2025 al 2026 — solo linee guida consumer ("Decalogo", ultimo
+aggiornamento marzo 2025). Il rischio va **ridimensionato da "minaccia attiva" a "iniziativa
+dormiente da monitorare"**: non risulta in fase di implementazione, ma potrebbe essere riattivato.
 
 ### 4.3 Quadro legale italiano
 
@@ -299,8 +321,9 @@ consulenti patrimoniali, non solo per notai.
 ## 9. DOMANDE APERTE PER VALIDAZIONE
 
 1. I notai italiani adotterebbero un SaaS esterno o vogliono on-premise?
-2. Il protocollo Notariato-Microsoft-Google è aperto a partner tecnologici terzi, o li esclude
-   (11.6)?
+2. ~~Il protocollo Notariato-Microsoft-Google è aperto a partner tecnologici terzi, o li esclude?~~
+   **Risolta parzialmente (11.6, 12.9, ricerca agosto 2026)**: il protocollo risulta dormiente dal
+   2015, nessuno sviluppo attivo trovato. Resta da monitorare, non più da temere a breve termine.
 3. Quale livello di certificazione di sicurezza richiedono gli studi notarili?
 4. Il mandato post-mortem è sufficiente come base legale o serve testamento olografo?
 5. Quanti crypto holder italiani hanno un piano di successione oggi? (stima: <5%)
@@ -316,6 +339,14 @@ consulenti patrimoniali, non solo per notai.
    banale rispetto al solo trigger post-mortem. Va validato con utenti reali nella fascia 50-60
    prima di investirci: preferiscono uno strumento condiviso da subito, o mantengono la logica
    "segreto fino alla morte" del modello attuale?
+10. **Nuovo (12.9)**: dato che il canale notai è presidiato da Notartel e dalle sue reti di
+    rivenditori storiche, ha più senso (a) cercare una partnership con un rivenditore esistente
+    (Zucchetti, Wolters Kluwer, Bit Sistemi) o con Notartel stessa, (b) puntare sui commercialisti
+    come canale meno chiuso, o (c) adottare il modello LexDo.it (consumer-facing, notaio come
+    partner di referral non come cliente pagante)?
+11. **Nuovo (12.8)**: nelle conversazioni di validazione, il professionista preferisce pagare una
+    licenza white-label e trattare i dati dei clienti (variante A, modello Everplans), o solo
+    consigliare il prodotto senza responsabilità sui dati (variante B, modello LexDo.it)?
 
 ---
 
@@ -338,8 +369,20 @@ limitarsi al "digitale".
 Il rischio maggiore resta la fiducia — ma un prodotto che strutturalmente non può perdere
 credenziali (perché non le conserva) affronta quel rischio meglio di uno che promette sicurezza
 senza un'architettura zero-knowledge a supporto. Il percorso più veloce al revenue resta il
-Modello B (B2B notai), validato con 3-5 studi pilota, ma con obiettivi di penetrazione ricalibrati
-sul TAM reale.
+Modello B (B2B notai/commercialisti), validato con 3-5 studi pilota, ma con obiettivi di
+penetrazione ricalibrati sul TAM reale.
+
+**Aggiornamento finale (Sezione 12.8-12.10, ricerca di mercato agosto 2026)**: il modello B2B2C non
+è più solo un'ipotesi — Everplans lo implementa dal 2015 con pricing verificabile, e LexDo.it ne
+dimostra una variante più leggera già attiva in Italia. Ma il canale notai è risultato più chiuso
+del previsto (Notartel, 12.9), e il pattern osservato su tutti i competitor dedicati comparabili
+(Everplans, Cake, Farewill) è un consolidamento per acquisizione, mai una crescita indipendente a
+scala — solo i player nati B2B2C dal primo giorno (Empathy, Trust & Will) crescono davvero. La
+raccomandazione finale è quindi di **impostare fin dall'inizio un modello B2B2C con il
+professionista come cliente pagante** (non un pivot successivo da consumer), di **testare
+commercialisti in parallelo ai notai** come canale potenzialmente meno chiuso, e di considerare
+esplicitamente un'acquisizione da parte di un'istituzione più grande come esito atteso a 3-5 anni,
+non come fallback.
 
 ---
 
@@ -383,10 +426,28 @@ più estraneo. La v1 non quantificava questo effetto sull'adozione B2C. **Aggiun
 e riflesso nella preferenza per il Modello B (B2B) rispetto al Modello A (B2C diretto).
 
 ### 11.6 — Il protocollo Notariato-Microsoft-Google come minaccia, non solo opportunità
-La v1 presentava il protocollo in sviluppo solo come un'opportunità di partnership. **Corretto**:
-se diventa lo standard nazionale gestito direttamente dai big tech insieme al Notariato, un
-prodotto terzo rischia di essere bypassato su quel canale specifico. Va monitorato come rischio
-competitivo, non solo come opportunità (Sezione 4.2, domanda aperta 9.2).
+La v1 presentava il protocollo in sviluppo solo come un'opportunità di partnership. La v2 lo aveva
+corretto in rischio competitivo attivo. **Aggiornamento ulteriore (ricerca agosto 2026)**: il
+protocollo risale al 2014-2015 e non risultano sviluppi tecnici dal 2025-2026 — solo linee guida
+consumer. Va **riclassificato da rischio attivo a rischio dormiente**: non un'iniziativa in corso
+che minaccia di bypassarci a breve, ma un precedente che potrebbe essere riattivato in futuro. Va
+comunque monitorato (Sezione 4.2, domanda aperta 9.2), ma non va più trattato come urgenza.
+
+### 11.8 — Il canale notai è più chiuso di quanto stimato, ma esiste un'alternativa
+Non affrontato nelle v1/v2: il canale tecnico verso i notai italiani è presidiato da **Notartel**
+(joint venture di CNN e Cassa Nazionale del Notariato), che distribuisce software quasi solo
+tramite reti di rivenditori storiche, non tramite vendita diretta aperta. Il Modello B come
+originariamente concepito assumeva un ciclo di vendita "lento" — la realtà è un canale
+istituzionalmente più chiuso. **Aggiunto** in Sezione 12.9: analisi del canale e alternativa
+LexDo.it (consumer-facing, notaio come partner di servizio non come cliente pagante).
+
+### 11.9 — Il pattern di consolidamento del settore, ora con dati reali
+La v2 ipotizzava che l'esito più realistico fosse un'acquisizione da parte di un player più grande
+(Modello D) piuttosto che una crescita indipendente. **Confermato empiricamente**: Everplans, Cake
+e Farewill — i tre competitor dedicati più maturi — sono stati tutti acquisiti da assicurazioni o
+gruppi funerari; due dei tre hanno smesso di esistere come prodotto indipendente dopo
+l'acquisizione. Solo i player nati B2B2C fin dal primo giorno (Empathy, Trust & Will) mostrano
+crescita reale. **Aggiunto** in Sezione 12.10.
 
 ### 11.7 — Margini di errore nell'unit economics
 Il margine lordo >90% dichiarato in v1 non considerava costi di assicurazione di responsabilità
@@ -615,10 +676,10 @@ settore, contatti personali, referral tra studi), non acquisizione via web. Ques
 di go-to-market più alti di quelli previsti e cicli di vendita lunghi (mesi, non settimane) prima
 di vedere ricavi — un fattore che l'unit economics in Sezione 8 non riflette.
 
-**Il rischio esistenziale già segnalato in 11.6 è concreto, non teorico.** Se il Notariato
-standardizza il protocollo con Microsoft e Google, un prodotto terzo rischia di essere bypassato
-proprio nel canale su cui il piano punta tutto — un ente che lavora già in quella direzione con
-partner dalle risorse enormemente superiori.
+**Aggiornamento (11.6)**: il protocollo Notariato-Microsoft-Google risulta dormiente dal 2015, non
+un rischio imminente — ma resta un precedente riattivabile, e nel frattempo **il canale notai si è
+rivelato più chiuso del previsto** (Notartel, vedi 11.8/12.9), il che è un problema pratico più
+immediato del rischio Notariato-Big Tech.
 
 **Il posizionamento "mappa di famiglia, utile in vita" (12.5) migliora l'engagement ma non è
 privo di precedenti fallimentari.** Gli strumenti di organizzazione della vita/famiglia
@@ -639,3 +700,90 @@ nicchia B2B, sostenibile se il fondatore ha accesso diretto e pazienza per il ca
 notarile/commercialisti" — oppure, più concretamente, un prodotto costruito come leva per una
 partnership o acquisizione da parte di un attore più grande (assicurazione, banca, o lo stesso
 Notariato — Modello D) piuttosto che come azienda indipendente a lungo termine.
+
+### 12.8 — Freemium B2B2C: le due varianti, ora con un precedente reale
+
+Il modello ipotizzato in 12.6-12.7 (freemium distribuito tramite il professionista) si divide in
+due varianti con trade-off opposti — e la ricerca di mercato dà un riscontro concreto a entrambe.
+
+**Variante A — White-label vero**: il professionista diventa titolare/responsabile del trattamento
+dei dati dei suoi clienti sulla piattaforma, paga una licenza, ha un dashboard con il roster
+clienti, brand dello studio. **Everplans implementa esattamente questo modello**: $196-292/mese per
+advisor, accesso illimitato e co-brandizzato per i suoi clienti. È la prova che la variante A
+funziona operativamente — ma con un costo di adozione confermato dalla ricerca: per un professionista
+regolamentato (in Italia, un notaio vincolato al segreto professionale), introdurre un fornitore
+terzo nella catena dati dei clienti richiede un accordo formale di trattamento dati (Art. 28 GDPR)
+e comporta responsabilità professionale estesa ai collaboratori/subappaltatori — una frizione reale
+e documentata, non ipotetica, che rende la vendita al professionista più impegnativa.
+
+**Variante B — Referral leggero**: il professionista consiglia il prodotto senza trattare dati,
+il cliente si registra direttamente. **LexDo.it usa questa struttura** in Italia: non vende
+software ai professionisti, li usa come partner a cui instradare i clienti, restando essa stessa il
+prodotto verso il consumatore. È l'unico precedente legaltech italiano comparabile ancora attivo
+dal 2015 — segnale che il modello B è quantomeno sostenibile nel tempo, anche se non abbiamo dati
+di scala/ricavi verificabili.
+
+**Non serve scegliere subito**: la domanda da fare nelle conversazioni di validazione resta quella
+già proposta — se il professionista preferisce pagare una licenza white-label (A, più valore, più
+attrito) o solo consigliare (B, meno valore, vendita più facile). Ora però possiamo mostrare
+Everplans come esempio concreto della variante A e LexDo.it come esempio concreto della variante B,
+invece di descrivere ipotesi astratte.
+
+### 12.9 — Il canale notai è strutturalmente chiuso: cosa significa e cosa fare
+
+Ricerca aggiornata (agosto 2026): il software per notai italiani non si vende tramite un canale
+SaaS aperto. **Notartel** (joint venture di Consiglio Nazionale del Notariato e Cassa Nazionale del
+Notariato) controlla l'infrastruttura tecnica di base (Rete Unitaria del Notariato, firma digitale,
+PEC) e i principali gestionali (FlaminiaDesk, NeoNotai). Il software indipendente arriva ai notai
+quasi solo tramite reti di rivenditori attive dagli anni '80-'90 (Zucchetti, Wolters Kluwer/OA
+Sistemi, Bit Sistemi) — non tramite vendita diretta a freddo.
+
+**Implicazione**: il Modello B come originariamente concepito (12.7: "ciclo di vendita lento e
+relazionale") sottostimava la natura del problema. Non è solo lentezza — è un canale
+istituzionalmente presidiato, dove un nuovo entrante indipendente parte da una posizione
+strutturalmente svantaggiata rispetto a chi è già dentro le reti di rivenditori storiche.
+
+**Due strade concrete, non alternative teoriche**:
+1. **Integrazione/partnership con un rivenditore esistente** (Zucchetti, Wolters Kluwer, Bit
+   Sistemi) o con Notartel stesso, invece di vendita diretta — sfrutta un canale già aperto, ma
+   richiede una trattativa di partnership B2B che ha le sue barriere d'ingresso.
+2. **Modello LexDo.it (variante B di 12.8)**: essere il prodotto consumer-facing verso cui il
+   notaio *indirizza* il cliente, bypassando la necessità di vendere una licenza al notaio come
+   gatekeeper. Il notaio diventa un canale di referral a basso attrito, non un cliente da
+   convincere a comprare software.
+
+**Nota positiva**: **i commercialisti non risultano soggetti allo stesso monopolio istituzionale**
+— il loro mercato software è dominato da vendor commerciali (TeamSystem, Zucchetti) ma senza un
+gatekeeper unico paragonabile a Notartel. Potrebbe essere un canale d'ingresso più accessibile del
+notariato, da validare nelle stesse conversazioni pilota.
+
+### 12.10 — Benchmark reali: pricing, conversione freemium, e l'esito atteso del settore
+
+**Pricing — attenzione a copiare il numero sbagliato**: Everplans chiede agli advisor USA
+$196-292/mese (~€2.150-3.250/anno). Copiarlo direttamente per notai italiani sarebbe un errore: la
+ricerca mostra che gli avvocati italiani investono in media solo **~€9.500/anno in tutto il
+digitale** — tra le categorie professionali più basse in Italia. Chiedere €2.000-3.000/anno per un
+singolo strumento rappresenterebbe il 25-35% dell'intero budget IT annuale di un professionista
+italiano medio: irrealistico. **Il pricing originale di Sezione 8 (€500-2.000/anno) resta la stima
+più corretta per il mercato italiano, non va alzato sulla base del benchmark USA.**
+
+**Freemium — benchmark di conversione confermato**: dati di settore (OpenView 2025) indicano una
+conversione mediana freemium→pagante del 2,6% per SaaS B2B, con prodotti a bassa frequenza d'uso
+(come questo, usato raramente per definizione) posizionati nella fascia bassa, 2-4%. Conferma la
+stima già fatta in 12.7-12.8: il freemium resta un contributo marginale ai ricavi (poche migliaia
+di euro l'anno anche in scenari ottimistici), non una leva di crescita primaria.
+
+**L'esito di settore, ora con dati invece di ipotesi**: dei competitor dedicati al digital legacy
+analizzati, **nessuno è cresciuto fino alla scala restando indipendente**. Everplans, Cake e
+Farewill sono stati tutti acquisiti da assicurazioni o gruppi funerari (Precoa, Foundation
+Partners, Dignity); due dei tre (Cake, Farewill) hanno smesso di esistere come prodotto autonomo
+dopo l'acquisizione. GoodTrust è ferma dal 2022. Gli unici due player in crescita reale — Empathy
+e Trust & Will — non sono mai stati consumer-first: hanno avuto il professionista/l'assicuratore
+come cliente pagante fin dal primo giorno, mai un pivot da freemium consumer a B2B.
+
+**Cosa cambia nella raccomandazione finale**: la Sezione 12.7 ipotizzava "consolidamento/exit
+più probabile della crescita indipendente" come deduzione logica. Ora è un pattern osservato in
+tre casi su tre tra i competitor comparabili. Rafforza la raccomandazione di **partire B2B fin dal
+primo euro di ricavo** (come Empathy e Trust & Will, non come i player poi consolidati che erano
+partiti consumer-first) e di considerare esplicitamente, fin dall'inizio, un'assicurazione, banca o
+istituzione professionale come acquirente naturale a 3-5 anni, non come piano B.
