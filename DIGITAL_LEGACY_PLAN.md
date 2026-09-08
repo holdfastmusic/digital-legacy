@@ -327,8 +327,14 @@ consulenti patrimoniali, non solo per notai.
 3. Quale livello di certificazione di sicurezza richiedono gli studi notarili?
 4. Il mandato post-mortem è sufficiente come base legale o serve testamento olografo?
 5. Quanti crypto holder italiani hanno un piano di successione oggi? (stima: <5%)
-6. **Nuovo**: un parere legale formale conferma che un modulo "solo istruzioni, mai credenziali"
-   evita l'esposizione ex Art. 615-ter c.p.?
+6. ~~Un parere legale formale conferma che un modulo "solo istruzioni, mai credenziali" evita
+   l'esposizione ex Art. 615-ter c.p.?~~ **Approfondita con ricerca giuridica (11.10)**: per il
+   modulo solo-istruzioni il rischio è basso (le istruzioni non sono l'accesso). Per il modulo
+   avanzato con consegna di credenziali vere, il punto specifico — se il consenso dato in vita
+   sopravvive alla morte ai fini del 615-ter — **resta un vuoto non risolto nella dottrina e
+   giurisprudenza italiana**, non solo una domanda senza risposta trovata. Resta comunque
+   necessario un parere legale formale prima di costruire quel modulo, ma ora con un quadro
+   normativo molto più preciso su cosa verificare.
 7. **Nuovo**: qual è un periodo di grazia/meccanismo di conferma accettabile per ridurre i falsi
    positivi del trigger senza renderlo inefficace?
 8. **Nuovo (12.4)**: un "inventario patrimoniale + accessi" più ampio (conti, polizze, app) compete
@@ -454,6 +460,58 @@ Il margine lordo >90% dichiarato in v1 non considerava costi di assicurazione di
 professionale e compliance, rilevanti per un prodotto B2B venduto a notai che maneggia dati
 sensibili. **Aggiunto** in Sezione 8: margine realistico stimato 70-85% al netto di questi costi,
 da verificare con preventivi reali.
+
+### 11.10 — Ricerca giuridica approfondita: mandato post mortem, patto successorio, 615-ter
+
+La domanda aperta 9.6 è stata approfondita con una ricerca dedicata su dottrina e giurisprudenza
+italiana (non solo un parere generico). Nota metodologica onesta: la ricerca si basa su fonti
+secondarie (sintesi di motori di ricerca, incrociate su fonti multiple indipendenti), non su testi
+integrali di sentenze o articoli — un accesso diretto alle fonti primarie era bloccato
+dall'ambiente. È un'analisi seria e molto più precisa di un rinvio generico "chiedi a un legale",
+ma non sostituisce un parere firmato da un avvocato che ha letto i testi originali.
+
+**Mandato post mortem exequendum (Art. 1722 c.c.) — dottrina solida**: un mandato dato in vita, da
+eseguirsi dopo la morte del mandante, per conto suo, è **valido** se resta esecutivo/informativo,
+per **Cass. civ., Sez. III, ord. 15 maggio 2018, n. 11763** — a condizione che non sia esso stesso
+il veicolo di attribuzione patrimoniale (quella deve passare da testamento o legge). È la base
+giuridica corretta per il modulo "solo istruzioni".
+
+**Patto successorio (Art. 458 c.c.) — posizione dominante favorevole, con un limite preciso**: la
+dottrina italiana (confermata dal **Consiglio Nazionale del Notariato, Studio n. 1/2023 DI,
+"Eredità digitale: inquadramento generale"**, 19 ott. 2023) tratta le credenziali come "chiavi di
+accesso virtuali", non come beni — consegnarle non dispone di una successione. **Il limite**: questo
+ragionamento si indebolisce per asset il cui valore reale è raggiungibile solo tramite quella
+credenziale e in modo esclusivo — il caso segnalato in dottrina è proprio il **wallet crypto**,
+coerente con la cautela già espressa nel piano sul Modello C.
+
+**Art. 615-ter c.p. — vuoto reale, non solo domanda senza risposta**: non esiste, nella
+giurisprudenza o dottrina italiana reperibile, una decisione o un'analisi che affronti direttamente
+se il consenso dato in vita per l'accesso post-mortem resti valido dopo la morte di chi lo ha dato.
+La giurisprudenza più vicina (**Cass. pen., Sez. V, n. 52572/2017** e **n. 2905/2019**, casi di
+accesso alla email dell'ex coniuge) stabilisce che **aver ricevuto la password in passato non basta
+a rendere lecito un accesso successivo**, se contrario alla volontà attuale di chi ha diritto di
+escluderlo — principio pensato per una persona vivente che può ancora opporsi, mai testato su un
+consenso dato da chi è morto e non ha mai revocato. Per i conti bancari nello specifico, nessuna
+fonte trovata tratta il caso — le regole KYC/antiriciclaggio rendono verosimilmente questo un
+rischio maggiore rispetto a social/email, e richiede una verifica dedicata separata.
+
+**Le sentenze italiane di successione digitale (Milano 2021, Bologna 2021, Roma 2022, Modena 2025,
+Venezia 2025) non convalidano il meccanismo del prodotto — correzione rispetto a quanto detto in
+Sezione 4.3/11.3**: dove è stato possibile vedere il meccanismo concreto (chiaramente a Bologna,
+verosimilmente a Venezia), i giudici hanno sempre ordinato un **trasferimento dati mediato dal
+fornitore verso un account nuovo**, mai la convalida dell'uso delle credenziali originali del
+defunto. In tutti i casi l'erede **non aveva** un'autorizzazione preventiva — hanno agito in
+giudizio proprio per quello. Questa giurisprudenza risolve un problema adiacente (costringere un
+fornitore riluttante a collaborare, via Art. 2-terdecies Codice Privacy), non convalida la
+consegna diretta di credenziali pre-autorizzata che il prodotto propone. Va citata con questa
+precisazione, non come precedente favorevole diretto.
+
+**Un'architettura alternativa già in uso in Italia, più difendibile**: **eLegacy**
+(elegacy.app) non consegna le password al beneficiario perché le usi personalmente — la
+piattaforma stessa è il mandatario, con firma digitale qualificata (Art. 20 co. 1-bis CAD), ed
+esegue lei le azioni (cancellazione, trasferimento) per conto del defunto. Il beneficiario non
+accede mai con credenziali altrui, il che evita esattamente il punto scoperto sul 615-ter. Vedi
+nota architetturale in Sezione 12.6.
 
 ---
 
@@ -648,6 +706,21 @@ concentrato solo sulle credenziali che permettono di accedere a sistemi di terzi
 post-mortem, perché quell'account non è "proprietà" del titolare da poter condividere liberamente.
 Questo isola ulteriormente il vault di credenziali come unica area che giustifica l'architettura
 zero-knowledge separata (Fase 3), indipendentemente dalla granularità dei permessi.
+
+**Nota architetturale sul modulo avanzato — "mandatario digitale" invece di consegna diretta
+(vedi ricerca giuridica 11.10)**: per il modulo credenziali (Fase 3), il modello "il beneficiario
+riceve la password vera e la usa personalmente" è esattamente il punto rimasto scoperto nella
+ricerca sul 615-ter — nessuna fonte italiana conferma che il consenso dato in vita dal titolare
+resti valido dopo la sua morte. **eLegacy**, piattaforma italiana già esistente, usa un'architettura
+diversa e più difendibile: la piattaforma stessa è il mandatario (con firma digitale qualificata,
+Art. 20 co. 1-bis CAD) ed esegue lei le azioni per conto del defunto — il beneficiario non accede
+mai personalmente con credenziali altrui. Da valutare come modello per il modulo avanzato, invece
+della consegna diretta di credenziali in sola lettura originariamente ipotizzata: sposta l'atto di
+"accesso" dall'utente finale all'app stessa, che agisce come mandataria in esecuzione di un mandato
+post mortem exequendum (validità confermata da Cass. n. 11763/2018, vedi 11.10) — riducendo
+l'esposizione penale senza rinunciare alla funzionalità. Resta comunque necessario un parere legale
+formale prima di implementarlo, specialmente per conti bancari (KYC/antiriciclaggio non coperti
+dalla ricerca).
 
 **Nota architetturale**: l'accesso "live" richiede che il beneficiario diventi un utente
 autenticato (oggi `Beneficiary` è solo un destinatario passivo di email, senza login). È un
