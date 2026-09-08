@@ -14,7 +14,7 @@ from src.routes.assignments import assignments_bp
 from src.routes.succession_plans import succession_plans_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static'))
-app.config['SECRET_KEY'] = 'digital_legacy_secret_key_2024_secure'
+app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY', 'digital_legacy_secret_key_2024_secure')
 
 # Enable CORS for all routes
 CORS(app, origins="*")
